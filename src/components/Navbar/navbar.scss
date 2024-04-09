@@ -1,0 +1,61 @@
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        padding: 5px 0px;
+        &:hover, &:focus {
+            scale: 1.05;
+            border-bottom: 3px solid #0249ab; 
+        }
+}
+
+    .left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #0249ab;
+        height: 100%;
+
+        a{
+            padding: 12px 24px;
+            margin: 20px;
+        }
+
+        .register {
+            background-color: #cefbff;
+        }
+
+        .signin {
+            border: 2px solid #cefbff;
+            color: #cefbff
+        }
+    }
+}
