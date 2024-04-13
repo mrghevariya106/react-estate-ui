@@ -61,6 +61,10 @@ nav {
     background-image: linear-gradient(to right, #3d559e, #01a9eb);
     height: 100%;
 
+    @include md {
+      background-image: none;
+    }
+
     a {
       padding: 12px 24px;
       margin: 20px;
@@ -68,11 +72,67 @@ nav {
 
     .register {
       background-color: #cefbff;
+
+      @include md {
+        background-color: #47afe2;
+        color: #cefbff;
+      }
     }
 
     .signin {
       border: 2px solid #cefbff;
       color: #cefbff;
+
+      @include md {
+        border: 2px solid #47afe2;
+        color: black;
+      }
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-image: linear-gradient(to right, #3d559e, #01a9eb);
+      //background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.7s ease-in-out;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+
+      &.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
     }
   }
 }
